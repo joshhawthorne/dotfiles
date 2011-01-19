@@ -84,6 +84,9 @@ function clone {
     git clone ssh://git@clevyrapps.com:40000/home/git/$1.git
 }
 
+alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
+alias hidehidden="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
+
 alias ra="sudo apachectl restart"
 
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
