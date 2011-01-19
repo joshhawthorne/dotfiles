@@ -1,7 +1,7 @@
 [core]
-	editor = mate -w
+	editor = vim
 	pager = =
-	excludesfile = /Users/josh/.gitignore
+	excludesfile = /Users/josh/.global_ignore
 [merge]
 	tool = p4merge
 	keepBackup = false
