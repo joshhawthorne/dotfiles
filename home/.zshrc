@@ -84,8 +84,8 @@ alias bu="b update"
 alias be="b exec"
 alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 
-alias vim="mvim"
-alias vi="mvim"
+#alias vim="mvim"
+#alias vi="mvim"
 
 function gadd {
     ghost add www.$1
