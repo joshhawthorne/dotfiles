@@ -1,5 +1,5 @@
 [core]
-	editor = vim
+	editor = mvim -f
 	pager = =
 	excludesfile = /Users/josh/.global_ignore
 [merge]
@@ -19,7 +19,8 @@
 	st = status
 	ci = commit
 	co = checkout
-	br = branch
+    br = branch
+    rb = pull --rebase
 [user]
 	name = Josh Hawthorne
 	email = josh@clevyr.com

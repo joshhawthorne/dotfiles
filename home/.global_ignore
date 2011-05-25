@@ -49,6 +49,7 @@ tmtags
 ### vim ###
 .*.sw[a-z]
 *.un~
+NERD_tree_*
 
 ### Android ###
 # built application files

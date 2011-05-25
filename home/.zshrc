@@ -1,10 +1,13 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
+export BAT_CHARGE=$HOME/bin/batcharge.py
 
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
 #export ZSH_THEME="tonotdo"
-export ZSH_THEME="gallifrey"
+#export ZSH_THEME="gallifrey"
+export ZSH_THEME="hawthorne"
+#export ZSH_THEME="solarize"
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
@@ -15,15 +18,16 @@ export ZSH_THEME="gallifrey"
 # Uncomment following line if you want to disable colors in ls
 # export DISABLE_LS_COLORS="true"
 
-plugins=(git osx ruby brew cap gem)
+plugins=(git osx ruby brew cap gem rails3 git-flow redis-cli rvm lol)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export ANT_HOME=/usr/local/ant
-export PATH=/usr/local/bin:/usr/local/sbin:/sw/bin:/sw/sbin:/Users/josh/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin://Users/josh/bin:/usr/X11R6/bin:${ANT_HOME}/bin:/usr/games
+export PATH=/usr/local/bin:/usr/local/sbin:/sw/bin:/sw/sbin:/Users/josh/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin://Users/josh/bin:/usr/X11R6/bin:${ANT_HOME}/bin:/usr/games:/Library/PostgreSQL/8.4/bin
 #export PATH=/usr/local/bin:/usr/local/sbin:/sw/bin:/sw/sbin:/opt/local/libexec/git-core:/opt/local/bin:/opt/local/sbin:/Users/josh/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin://Users/josh/bin:/usr/X11R6/bin:${ANT_HOME}/bin:/usr/games
 
+bindkey -v
 
 function fp { osascript -e 'tell application "Finder"'\
  -e "if (${1-1} <= (count Finder windows)) then"\
@@ -63,6 +67,22 @@ alias ql="qlmanage -p 2>/dev/null" # preview a file using QuickLook
 alias redo='sudo \!-1'
 
 alias r="rails"
+
+alias g="git"
+alias gf="git flow"
+alias gpll="git pull --rebase"
+alias ga="git add ."
+function gci {
+    git commit -m $1
+}
+alias gst="git status"
+alias gpsh="git push"
+
+alias b="bundle"
+alias bi="b install --path vendor"
+alias bu="b update"
+alias be="b exec"
+alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 
 alias vim="mvim"
 alias vi="mvim"
