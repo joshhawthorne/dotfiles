@@ -25,7 +25,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export ANT_HOME=/usr/local/ant
-export PATH=/usr/local/bin:/usr/local/sbin:/sw/bin:/sw/sbin:/Users/josh/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin://Users/josh/bin:/usr/X11R6/bin:${ANT_HOME}/bin:/usr/games:/Library/PostgreSQL/8.4/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/sw/bin:/sw/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:./bin:/usr/X11R6/bin:${ANT_HOME}/bin:/usr/games:/Library/PostgreSQL/8.4/bin
 #export PATH=/usr/local/bin:/usr/local/sbin:/sw/bin:/sw/sbin:/opt/local/libexec/git-core:/opt/local/bin:/opt/local/sbin:/Users/josh/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin://Users/josh/bin:/usr/X11R6/bin:${ANT_HOME}/bin:/usr/games
 
 bindkey -v
