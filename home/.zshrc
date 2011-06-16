@@ -7,6 +7,7 @@ export BAT_CHARGE=$HOME/bin/batcharge.py
 #export ZSH_THEME="tonotdo"
 #export ZSH_THEME="gallifrey"
 export ZSH_THEME="hawthorne"
+#export ZSH_THEME="random"
 #export ZSH_THEME="solarize"
 
 # Set to this to use case-sensitive completion
@@ -18,7 +19,7 @@ export ZSH_THEME="hawthorne"
 # Uncomment following line if you want to disable colors in ls
 # export DISABLE_LS_COLORS="true"
 
-plugins=(git osx ruby brew cap gem rails3 git-flow redis-cli rvm lol)
+plugins=(git osx brew cap gem rails3 git-flow redis-cli rvm github vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,6 +41,15 @@ alias cfp='fp | pbcopy'
 function take {
   mkdir -p $1 && cd $1
 }
+
+alias cr="concrete_reset.sh"
+
+alias v="vagrant"
+alias vd="vagrant destroy"
+alias vs="vagrant ssh"
+alias vu="vagrant up"
+alias vr="vagrant reload"
+alias vh="vagrant halt"
 
 alias grep="grep --color=auto"
 alias ack="ack --color"
@@ -68,15 +78,12 @@ alias redo='sudo \!-1'
 
 alias r="rails"
 
-alias g="git"
 alias gf="git flow"
 alias gpll="git pull --rebase"
 alias ga="git add ."
 function gci {
     git commit -m $1
 }
-alias gst="git status"
-alias gpsh="git push"
 
 alias b="bundle"
 alias bi="b install --path vendor"
@@ -85,7 +92,7 @@ alias be="b exec"
 alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 
 #alias vim="mvim"
-#alias vi="mvim"
+alias vi="mvim"
 
 function gadd {
     ghost add www.$1
@@ -108,5 +115,8 @@ alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE && kill
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
 
 alias ra="sudo apachectl restart"
+
+SAVEHIST=10000
+HISTSIZE=10000
 
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi

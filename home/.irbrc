@@ -1,6 +1,8 @@
 
-require 'rubygems'
-require 'wirble'
+require 'rubygems' unless defined? Gem
+require 'irbtools'
 
-Wirble.init
-Wirble.colorize
+#require 'wirble'
+
+#Wirble.init
+#Wirble.colorize
