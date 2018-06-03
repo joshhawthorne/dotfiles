@@ -1,20 +1,7 @@
 [core]
 	editor = mvim -f
 	pager = =
-	excludesfile = /Users/josh/.global_ignore
-[merge]
-	tool = p4merge
-	keepBackup = false
-[mergetool "p4merge"]
-	cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-	keepTemporaries = false
-	trustExitCode = false
-	keepBackup = false
-[diff]
-	tool = p4diff
-[difftool "p4diff"]
-  prompt = false
-  cmd = p4merge "$LOCAL" "$BASE"
+	excludesfile = /Users/hawchorn/.global_ignore
 [alias]
 	st = status
 	ci = commit
@@ -23,7 +10,7 @@
     rb = pull --rebase
 [user]
 	name = Josh Hawthorne
-	email = josh@clevyr.com
+	email = josh@joshhawthorne.com
 [color]
 	branch = auto
 	diff = auto
